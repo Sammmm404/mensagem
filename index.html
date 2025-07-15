@@ -47,10 +47,29 @@
     Queria te dizer uma coisa que vem quietinha no meu coração há um tempo… Eu gosto da tua presença, do jeito como você chega e muda o meu dia sem esforço. Toda vez que você vai embora, fica um silêncio em mim que só você sabe preencher. Então, se puder, fica. Fica mais um pouco. Ou quem sabe… não vai mais. Você está nos meus pensamentos o tempo todo, mesmo quando tenta ser discreta. E, se for pra escolher, eu escolheria te ter por perto, hoje e amanhã também.,<br>
   </div>
 
-  <!-- Música suave (online) -->
-  <audio autoplay loop>
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
+  <!-- Botão para iniciar a música -->
+<button onclick="playMusic()" style="padding: 10px 20px; font-size: 16px; margin-top: 20px;">
+  Iniciar música 🎵
+</button>
+
+<!-- Player invisível -->
+<div id="youtube-player" style="display: none;">
+  <iframe
+    id="yt-iframe"
+    width="0"
+    height="0"
+    frameborder="0"
+    allow="autoplay"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<script>
+  function playMusic() {
+    document.getElementById("yt-iframe").src =
+      "https://www.youtube.com/embed/vGJTaP6anOU?autoplay=1&loop=1&playlist=vGJTaP6anOU";
+  }
+</script>
+
 </body>
 </html>
